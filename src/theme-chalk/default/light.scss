@@ -1,0 +1,15 @@
+@property --xl-color-primary-01{
+    syntax: "<color>";
+    inherits: true;
+    initial-value: transparent;
+}
+@property --xl-color-primary-02{
+    syntax: "<color>";
+    inherits: true;
+    initial-value: transparent;
+}
+:root{
+    //--el-transition-duration: 3s;
+    --xl-color-primary-01: rgb(255, 150, 255);
+    --xl-color-primary-02: rgb(0, 255, 255);
+}

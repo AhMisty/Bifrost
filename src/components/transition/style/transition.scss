@@ -1,0 +1,15 @@
+.fade-leave-active, .fade-enter-active {
+    transition: filter var(--el-transition-duration), transform var(--el-transition-duration);
+}
+.fade-enter-from {
+    filter: opacity(0);
+    transform: var(--xl-transition-enter-from);
+}
+.fade-enter-to {
+    filter: opacity(1);
+    transform: translateY(0px);
+}
+.fade-leave-to {
+    filter: opacity(0);
+    transform: var(--xl-transition-leave-to);
+}

@@ -1,0 +1,22 @@
+.page{
+    min-height: 100vh;
+    background-color: var(--el-bg-color);
+    transition: background-color var(--el-transition-duration);
+}
+.header{
+    --el-header-padding: 0;
+    --el-header-height: auto;
+    position: sticky;
+    top: 0;
+    z-index: var(--el-index-top);
+}
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+}
+.footer{
+    --el-footer-padding: 0;
+    --el-footer-height: auto;
+}

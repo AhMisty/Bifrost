@@ -1,0 +1,50 @@
+%input{
+    content: "";
+    position: absolute;
+    left: 1px;
+    right: 1px;
+    top: 1px;
+    bottom: 1px;
+    border-radius: var(--el-input-border-radius);
+    background-image: linear-gradient(135deg, var(--xl-color-primary-01) 30%, var(--xl-color-primary-02) 70%);
+    transition: filter var(--el-transition-duration), --xl-color-primary-01 var(--el-transition-duration), --xl-color-primary-02 var(--el-transition-duration);
+}
+.input::before{
+    @extend %input;
+}
+.input:hover:before{
+    transition: none;
+    filter: blur(calc(2*var(--el-border-width)));
+}
+.input div[class*=el-input-group__prepend] {
+    width: 15%;
+    min-width: 15%;
+    max-width: 15%;
+    overflow: hidden;
+    transition: background-color var(--el-transition-duration), color var(--el-transition-duration), box-shadow var(--el-transition-duration);
+}
+.input div[class*=el-input__wrapper] {
+    --el-input-bg-color: var(--el-bg-color);
+    --el-fill-color-blank: var(--el-bg-color);
+    transition: background-color var(--el-transition-duration), box-shadow var(--el-transition-duration);
+}
+.input span[class*=el-input__prefix] {
+    transition: none;
+}
+@property --xl-input-color{
+    syntax: "<color>";
+    inherits: true;
+    initial-value: transparent;
+}
+.input input[class*=el-input__inner]{
+    --xl-input-color: var(--el-text-color-regular);
+    color: var(--xl-input-color);
+    transition: --xl-input-color var(--el-transition-duration);
+}
+.input input[class*=el-input__inner]::placeholder{
+    transition: color var(--el-transition-duration);
+}
+.input span[class*=el-input__count-inner]{
+    --el-fill-color-blank: var(--el-bg-color);
+    transition: color var(--el-transition-duration), background-color var(--el-transition-duration);
+}

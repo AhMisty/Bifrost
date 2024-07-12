@@ -1,0 +1,51 @@
+body{
+    margin: 0px auto;
+    position: absolute;
+    width: 100vw;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+@property --xl-root-scrollbar-color-01{
+    syntax: "<color>";
+    inherits: true;
+    initial-value: transparent;
+}
+@property --xl-root-scrollbar-color-02{
+    syntax: "<color>";
+    inherits: true;
+    initial-value: transparent;
+}
+:root {
+    --xl-root-scrollbar-color-01: var(--el-color-info);
+    --xl-root-scrollbar-color-02: var(--el-fill-color);
+    transition: --xl-root-scrollbar-color-01 var(--el-transition-duration), --xl-root-scrollbar-color-02 var(--el-transition-duration);
+    scrollbar-color: var(--xl-root-scrollbar-color-01) var(--xl-root-scrollbar-color-02);
+    scrollbar-width: auto;
+}
+#nprogress .bar {
+    background-color: transparent !important;
+    background-image: linear-gradient(135deg, var(--xl-color-primary-01) 0%, var(--xl-color-primary-02) 100%);
+    transition: --xl-color-primary-01 var(--el-transition-duration), --xl-color-primary-02 var(--el-transition-duration);
+}
+#nprogress .peg {
+    box-shadow: 0 0 10px var(--el-color-primary), 0 0 5px var(--el-color-primary) !important;
+}
+.el-loading-mask {
+    transition: opacity var(--el-transition-duration), background-color var(--el-transition-duration);
+}
+.el-loading-spinner .path {
+    transition: stroke var(--el-transition-duration);
+}
+.el-loading-spinner .el-loading-text {
+    transition: color var(--el-transition-duration);
+}
+.el-message {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    transition: border var(--el-transition-duration), background-color var(--el-transition-duration), opacity var(--el-transition-duration), transform var(--el-transition-duration), top var(--el-transition-duration);
+}
+.el-message>* {
+    transition: color var(--el-transition-duration);
+}
